@@ -1,38 +1,27 @@
-Angular Gadget
-====
+# IschoolWeb
 
-## Gadget 清單
-* `25c70b56-4c70-4336-b74b-ef12d43064de` 線上點名
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
 
-## 前置要求
-* 安裝 Node.js
-* 安裝 Yarn (建議安裝)
-* 安裝 VSCode
-* 安裝 Angular CLI (`yarn global add @angular/cli`)。
+## Development server
 
-## 開始開發
-* `git clone https://github.com/gildarts/angulargadget mygadget`
-* `cd mygadget`
-* `yarn` #安裝套件
-* `yarn start` ＃啟動 angular server。
-* 連到 `http://localhost:4200` 開始 Debug。
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## 部署
-* `yarn build`
-* 把 dist 目錄所有檔案部署出去。
+## Code scaffolding
 
-## Questions
-### 如何放置 Gadget 專有資源，例如圖片、Word 檔…  
-將檔案放到 `src/assets` 裡面即可，例如檔案「`src/assets/img/icon.png`」實際路徑是「`assets/img/icon.png`」。
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-### 如何加入 JQuery
-通常在 angualr 不使用 jquery，但仍然可以使用，先「`yarn add jquery`」安裝 jquery，然後在「`.angular.json`」加入設定。
-```json
-...
-    "scripts": [
-        "../node_modules/jquery/dist/jquery.min.js"
-    ],
-...
-```
-這作法會將 jquery 打包進 bundle 裡面，如果不要打包，可以直接放在 `assets` 目錄裡，然後在 `index.html` 直接引用。
+## Build
 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
