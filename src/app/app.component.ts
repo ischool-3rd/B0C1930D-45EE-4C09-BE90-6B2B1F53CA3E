@@ -8,6 +8,8 @@ import { setTheme } from 'ngx-bootstrap/utils';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ClassInfo, RankInfo, RankType, ScoreType, SelectionObj, SemsScoreInfo, StudentInfo, SubjectOrDomainInfo, YearSemster } from './vo';
 import { MatGridTileHeaderCssMatStyler } from '@angular/material/grid-list';
+declare var $: any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
