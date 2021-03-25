@@ -80,6 +80,10 @@
                     (click)="searchData()">
                     查詢
                 </button>
+                    <button type="button" class="btn btn-primary  mr-3" aria-haspopup="true" aria-expanded="false"
+                    (click)="exportData('#ClassSemesterScoreTable', '班級學期成績')">
+                    匯出
+                </button>
                 </div>
 
                 <div class="mt-2 mb-2">
@@ -130,7 +134,7 @@
                 </div>
                 <ng-container *ngIf="!isLoading; else tplLoading">
                     <ng-container *ngIf="!noneSS; else tplNoSS">
-                        <table class="table table-bordered table-striped mb-5 sticky" >
+                        <table id="ClassSemesterScoreTable" class="table table-bordered table-striped mb-5 sticky" >
                          
                             <thead>
                                 <tr>
