@@ -519,14 +519,14 @@ export class AppComponent implements OnInit {
     }
   }
 
-  exportData(tableID, filename = '') {
+  exportData(selector) {
     var downloadLink;
     var dataType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;';
-    var tableSelect = document.querySelector(tableID);
-    var tableHTML = encodeURIComponent(tableSelect.outerHTML);
+    var tableSelect = document.querySelector(selector);
+    var tableHTML = encodeURIComponent('<style> table, td {border:1px solid #dee2e6;} table {border-collapse:collapse}</style>' + tableSelect.outerHTML);
     
     // Specify file name
-    filename = filename?filename+'.xls':'excel_data.xls';
+    var filename = this.selectionObj.schoolYearSemester.SchoolYear+'-'+this.selectionObj.schoolYearSemester.Semester+'-'+'班級學期成績'+'.xls';
     
     // Create download link element
     downloadLink = document.createElement("a");
