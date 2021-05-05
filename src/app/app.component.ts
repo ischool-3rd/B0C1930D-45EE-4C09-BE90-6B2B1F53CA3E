@@ -523,10 +523,10 @@ export class AppComponent implements OnInit {
     var downloadLink;
     var dataType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;';
     var tableSelect = document.querySelector(selector);
-    var tableHTML = encodeURIComponent('<style> table, td {border:1px solid #dee2e6;} table {border-collapse:collapse}</style>' + tableSelect.outerHTML);
+    var tableHTML = encodeURIComponent('<style> table, td {border:1px solid #dee2e6; text-align:center;} table {border-collapse:collapse}</style>' + tableSelect.outerHTML);
     
     // Specify file name
-    var filename = this.selectionObj.schoolYearSemester.SchoolYear+'-'+this.selectionObj.schoolYearSemester.Semester+'-'+'班級學期成績'+'.xls';
+    var filename = this.selectionObj.schoolYearSemester.SchoolYear+'-'+this.selectionObj.schoolYearSemester.Semester+' '+this.selectionObj.currentClass.ClassName+' 班級學期成績'+'.xls';
     
     // Create download link element
     downloadLink = document.createElement("a");
